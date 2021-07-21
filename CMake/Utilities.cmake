@@ -51,9 +51,11 @@ function(build_dependency lib_name)
 
   set(lib_file_name ${lib_name})
   if (${lib_name} STREQUAL "openssl")
-    set(lib_file_name ssl)
+    set(lib_file_name "ssl" "libssl" "libssld")
   elseif(${lib_name} STREQUAL "srtp")
     set(lib_file_name srtp2)
+  elseif(${lib_name} STREQUAL "curl")
+    set(lib_file_name "curl" "libcurl-d_imp")
   endif()
   set(library_found NOTFOUND)
   find_library(
