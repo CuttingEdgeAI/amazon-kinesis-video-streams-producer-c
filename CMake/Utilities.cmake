@@ -55,7 +55,7 @@ function(build_dependency lib_name)
   elseif(${lib_name} STREQUAL "srtp")
     set(lib_file_name srtp2)
   elseif(${lib_name} STREQUAL "curl")
-    set(lib_file_name "curl" "libcurl-d_imp")
+    set(lib_file_name "curl" "libcurl-d_imp" "libcurl-d")
   endif()
   set(library_found NOTFOUND)
   find_library(
